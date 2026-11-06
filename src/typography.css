@@ -1,0 +1,100 @@
+/* Four families, four repeatable roles across every FuelUp screen. */
+:root {
+  --font-heading: "Space Grotesk", "Arial", sans-serif;
+  --font-editorial: "DM Serif Display", Georgia, serif;
+  --font-body: "DM Sans", "Arial", sans-serif;
+  --font-data: "IBM Plex Mono", "Courier New", monospace;
+  font-family: var(--font-body);
+}
+body, p, input, select, textarea { font-family: var(--font-body); }
+h1, h2, h3, h4, legend, button, .primary, .secondary, .welcome-open,
+.welcome-secondary, .recipe-ticket strong, .recipe-option summary strong,
+.list-row strong, .reminder-alert strong {
+  font-family: var(--font-heading);
+}
+h2, h3, h4, legend { font-weight: 600; }
+.brand, .mobile-brand, .welcome-footer > span {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -1.8px;
+}
+.welcome-copy h1 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -.065em;
+  line-height: 1.08;
+}
+.welcome-copy h1 > span {
+  display: inline-block;
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -.035em;
+  padding-right: .12em;
+}
+.welcome-section-heading h2 {
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  font-size: 48px;
+  letter-spacing: -.025em;
+  line-height: 1.12;
+}
+.page-heading h1 {
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  font-size: clamp(34px, 3vw, 44px);
+  letter-spacing: -.025em;
+  line-height: 1.16;
+}
+.rescue h2 {
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  font-size: 44px;
+  letter-spacing: -.025em;
+  line-height: 1.12;
+}
+.welcome-motion .scroller {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -.055em;
+}
+.section-heading h2, .reminders-panel h2 { letter-spacing: -.025em; }
+.primary, .secondary, .emergency-button { font-weight: 600; letter-spacing: -.015em; }
+.sidebar nav button, .mobile-nav button { font-family: var(--font-heading); font-weight: 500; }
+.sidebar nav button.active, .mobile-nav button.active { font-weight: 700; }
+.budget-amount, .budget-labels, .timeline-time, .class-end, .now-tag,
+.rescue-facts, .detail-stats, .nutrition, .expiry-tag, .nav-count,
+.date-label, .eyebrow, #demo-clock, input[type="time"], input[type="number"],
+.recipe-ticket span, .recipe-option summary > span {
+  font-family: var(--font-data);
+  font-variant-numeric: tabular-nums;
+}
+.budget-amount { font-size: 38px; font-weight: 500; letter-spacing: -.055em; }
+.budget-amount > span { font-size: 18px; font-weight: 400; }
+.budget-labels { font-size: 13px; letter-spacing: -.04em; }
+.date-label, .eyebrow { font-size: 14px; font-weight: 500; letter-spacing: .045em; }
+.rescue .eyebrow { font-size: 13px; }
+.timeline-time { font-size: 13px; letter-spacing: -.05em; }
+.class-end { letter-spacing: -.05em; }
+.rescue-facts { font-size: 14px; letter-spacing: -.04em; }
+.detail-stats, .nutrition { letter-spacing: -.035em; }
+.expiry-tag { font-size: 12px; letter-spacing: -.04em; }
+.demo-clock input { width: 122px; font-size: 16px; letter-spacing: -.05em; }
+.recipe-ticket span { font-size: 13px; }
+.recipe-option summary > span { font-size: 14px; }
+.welcome-step-grid h3 { font-weight: 600; letter-spacing: -.035em; }
+.modal-head h2 { font-family: var(--font-heading); font-weight: 600; letter-spacing: -.035em; }
+.meal-detail h3 { font-family: var(--font-editorial); font-weight: 400; font-size: 32px; line-height: 1.18; }
+@media (max-width: 700px) {
+  .page-heading h1 { font-size: 35px; }
+  .welcome-copy h1 { font-size: 52px; }
+  .welcome-section-heading h2 { font-size: 39px; }
+  .rescue h2 { font-size: 38px; }
+  .welcome-motion .scroller { letter-spacing: -.04em; }
+  .demo-clock { column-gap: 7px; }
+  .demo-clock input { width: 118px; font-size: 16px; }
+  .timeline-time { width: 68px; font-size: 13px; }
+  .rescue-facts { font-size: 15px; }
+  .recipe-option summary > span { font-size: 13px; }
+  .meal-detail h3 { font-size: 30px; }
+}

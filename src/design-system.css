@@ -1,0 +1,642 @@
+/* Four-colour system. Borders use the ink at low opacity. */
+:root {
+  --paper: #f7f6f2;
+  --ink: #2e332b;
+  --rust: #a7472e;
+  --sage: #dde3d3;
+  --border: color-mix(in srgb, var(--ink) 17%, transparent);
+  --surface: var(--paper);
+  --line: var(--border);
+  --muted: var(--ink);
+  --accent: var(--rust);
+  --green: var(--ink);
+}
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 16px;
+}
+.app-shell {
+  font-size: 16px;
+}
+.sidebar {
+  background: var(--paper);
+}
+.sidebar nav button {
+  font-size: 16px;
+  min-height: 52px;
+  padding: 14px 12px;
+}
+.sidebar nav button.active {
+  background: var(--sage);
+  color: var(--ink);
+}
+.sidebar-bottom > button {
+  font-size: 15px;
+  min-height: 48px;
+}
+.brand-icon,
+.primary {
+  background: var(--rust);
+  color: var(--paper);
+}
+.primary:hover {
+  background: var(--ink);
+}
+.avatar {
+  background: var(--sage);
+  color: var(--ink);
+  font-size: 16px;
+}
+.profile strong {
+  font-size: 16px;
+}
+.nav-count {
+  font-size: 14px;
+  background: var(--sage);
+}
+.topbar {
+  height: 85px;
+}
+.breadcrumb,
+.local-status {
+  font-size: 14px;
+  color: var(--ink);
+}
+.page-heading h1 {
+  font-size: clamp(28px, 2.4vw, 38px);
+}
+.eyebrow,
+.date-label {
+  font-size: 14px;
+  letter-spacing: 0.8px;
+}
+.date-label {
+  margin-bottom: 14px;
+}
+.emergency-button {
+  font-size: 16px;
+  font-weight: 600;
+  min-height: 52px;
+  padding: 12px 18px;
+  border: 1px solid var(--rust);
+  background: var(--paper);
+  color: var(--rust);
+}
+.emergency-button svg {
+  color: currentColor;
+}
+.context-strip {
+  min-height: 64px;
+  gap: 20px;
+  font-size: 16px;
+}
+.location-control select {
+  font-size: 16px;
+  min-height: 48px;
+  max-width: 160px;
+  width: auto;
+}
+.location-control > svg {
+  width: 19px;
+  height: 19px;
+}
+.demo-clock {
+  gap: 10px;
+  font-size: 16px;
+}
+.demo-clock input {
+  font-size: 16px;
+  min-height: 48px;
+  width: 105px;
+}
+.demo-clock button {
+  font-size: 14px;
+  min-height: 48px;
+  padding: 8px;
+}
+.context-note {
+  font-size: 14px;
+}
+.section-heading h2 {
+  font-size: 18px;
+  line-height: 1.4;
+}
+.section-heading {
+  align-items: center;
+}
+.text-button {
+  font-size: 14px;
+  min-height: 48px;
+}
+.primary,
+.secondary {
+  font-size: 16px;
+  min-height: 50px;
+}
+.muted {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink);
+}
+.panel {
+  border-color: var(--border);
+  background: var(--paper);
+  border-radius: 10px;
+}
+.dashboard-grid {
+  grid-template-columns: minmax(0, 1fr) 320px;
+}
+.rescue {
+  background: var(--sage);
+  border-color: var(--border);
+  border-radius: 10px;
+  min-height: 440px;
+}
+.rescue-copy {
+  padding: 28px;
+  width: 66%;
+}
+.rescue .eyebrow {
+  font-size: 13px;
+  color: var(--ink);
+}
+.rescue h2 {
+  font-family: var(--font-heading);
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -1.3px;
+  line-height: 1.15;
+}
+.rescue p {
+  font-size: 15px;
+  color: var(--ink);
+  max-width: 330px;
+  line-height: 1.6;
+}
+.hero-meal h3 {
+  font-size: 17px;
+}
+.hero-meal small {
+  font-size: 14px;
+  color: var(--ink);
+}
+.hero-meal > span {
+  background: var(--paper);
+  color: var(--rust);
+}
+.rescue-facts {
+  font-size: 15px;
+  gap: 12px;
+}
+.rescue-facts > span:first-child {
+  font-size: 16px;
+}
+.hero-footnote {
+  font-size: 14px;
+  color: var(--ink);
+}
+.bowl-wrap {
+  width: 39%;
+}
+.budget-amount {
+  font-size: 40px;
+}
+.budget-amount > span {
+  font-size: 20px;
+}
+.budget-panel > .muted,
+.fridge-panel > .muted {
+  font-size: 15px;
+}
+.budget-labels {
+  font-size: 13px;
+}
+.budget-track {
+  background: var(--sage);
+  height: 7px;
+}
+.budget-track > span {
+  background: var(--rust);
+}
+.fridge-preview strong {
+  font-size: 16px;
+}
+.fridge-preview small {
+  font-size: 14px;
+  color: var(--ink);
+}
+.expiry-tag {
+  font-size: 13px;
+  padding: 5px 7px;
+  background: var(--sage);
+  color: var(--ink);
+}
+.ingredient-icon,
+.ingredient-icon.green {
+  background: var(--sage);
+  color: var(--ink);
+}
+.timeline-row,
+.gap-row {
+  gap: 12px;
+  min-height: 86px;
+}
+.timeline-time {
+  font-size: 13px;
+  width: 70px;
+  color: var(--ink);
+}
+.timeline-row h3,
+.gap-row h3 {
+  font-size: 16px;
+  line-height: 1.4;
+}
+.timeline-row p,
+.gap-row p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.class-end {
+  font-size: 12px;
+  color: var(--ink);
+}
+.now-tag {
+  font-size: 12px;
+  background: var(--paper);
+  color: var(--ink);
+}
+.gap-row.current,
+.gap-row {
+  background: var(--sage);
+}
+.gap-row h3,
+.gap-row .timeline-icon {
+  color: var(--ink);
+}
+.timeline-icon {
+  width: 30px;
+  height: 30px;
+}
+.page-footer {
+  font-size: 13px;
+  color: var(--ink);
+}
+.form-grid label,
+.form-grid legend {
+  font-size: 15px;
+  color: var(--ink);
+}
+.form-grid input:not([type="checkbox"]),
+.form-grid select {
+  font-size: 16px;
+  min-height: 48px;
+  background: var(--paper);
+  color: var(--ink);
+}
+.equipment-options label,
+.kitchen-setup .equipment-options label {
+  font-size: 15px;
+  min-height: 48px;
+  background: var(--paper);
+  color: var(--ink);
+}
+.equipment-options input {
+  accent-color: var(--rust);
+}
+.fine-print {
+  font-size: 13px;
+  color: var(--ink);
+}
+.list-row strong {
+  font-size: 16px;
+}
+.list-row small {
+  font-size: 14px;
+  color: var(--ink);
+}
+.icon-button {
+  min-width: 44px;
+  min-height: 44px;
+}
+.notice,
+.error-text,
+.success {
+  font-size: 15px;
+}
+.notice {
+  background: var(--sage);
+  color: var(--ink);
+}
+.error-text {
+  color: var(--rust);
+}
+.success {
+  color: var(--ink);
+}
+.meal-detail h3 {
+  font-size: 28px;
+}
+.meal-detail h4 {
+  font-size: 17px;
+}
+.meal-detail li,
+.help-copy p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+.detail-stats {
+  font-size: 16px;
+}
+.ingredient-chips span {
+  font-size: 14px;
+  background: var(--sage);
+}
+.pill {
+  font-size: 13px;
+  color: var(--ink);
+  background: var(--sage);
+}
+.nutrition {
+  font-size: 14px;
+  color: var(--ink);
+}
+.modal-head h2 {
+  font-size: 24px;
+}
+.recipe-option {
+  background: var(--paper);
+}
+.recipe-option summary strong {
+  font-size: 18px;
+}
+.recipe-option summary span {
+  font-size: 15px;
+  color: var(--ink);
+}
+.recipe-option ol {
+  font-size: 16px;
+}
+.recipe-empty {
+  font-size: 16px;
+  background: var(--sage);
+}
+.kitchen-setup legend {
+  font-size: 20px;
+}
+.kitchen-setup .text-button {
+  font-size: 14px;
+}
+.reminders-panel {
+  background: var(--paper);
+  border-color: var(--border);
+}
+.reminders-panel h2 {
+  font-size: 18px;
+}
+.reminders-panel > .muted {
+  font-size: 15px;
+}
+.reminder-toggle {
+  font-size: 15px;
+  min-height: 44px;
+}
+.reminder-actions .text-button {
+  font-size: 14px;
+}
+.reminder-alert {
+  background: var(--sage);
+  border-color: var(--border);
+}
+.reminder-alert strong {
+  font-size: 18px;
+}
+.reminder-alert p {
+  font-size: 16px;
+}
+.reminder-alert .text-button {
+  font-size: 16px;
+  color: var(--ink);
+}
+.reminder-scope {
+  font-size: 13px;
+  color: var(--ink);
+}
+@media (max-width: 1180px) {
+  .sidebar {
+    width: 210px;
+  }
+  .workspace {
+    margin-left: 210px;
+    width: calc(100% - 210px);
+  }
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  .side-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .rescue-copy {
+    width: 65%;
+  }
+  .bowl-wrap {
+    width: 40%;
+  }
+  .context-note {
+    display: none;
+  }
+  .page-heading {
+    flex-wrap: wrap;
+  }
+  .context-strip {
+    gap: 12px;
+  }
+  .demo-clock {
+    gap: 7px;
+  }
+}
+@media (max-width: 700px) {
+  .workspace {
+    margin-left: 0;
+    width: 100%;
+  }
+  .topbar {
+    height: 72px;
+  }
+  .local-status {
+    font-size: 13px;
+  }
+  .page-heading h1 {
+    font-size: 29px;
+    max-width: none;
+  }
+  .date-label {
+    font-size: 13px;
+  }
+  .page-heading .emergency-button {
+    font-size: 17px;
+    min-height: 52px;
+    padding: 12px 18px;
+  }
+  .context-strip {
+    flex-wrap: wrap;
+    padding: 8px 0;
+    gap: 0 14px;
+  }
+  .context-strip .strip-divider {
+    display: none;
+  }
+  .location-control select {
+    font-size: 16px;
+    width: 145px;
+  }
+  .demo-clock {
+    font-size: 16px;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .demo-clock input {
+    font-size: 16px;
+    width: 100px;
+  }
+  .demo-clock button {
+    font-size: 14px;
+  }
+  .rescue {
+    min-height: 0;
+  }
+  .rescue-copy {
+    width: 100%;
+    padding: 24px;
+  }
+  .rescue .bowl-wrap,
+  .empty-rescue > .bowl {
+    display: none;
+  }
+  .rescue .eyebrow {
+    font-size: 13px;
+  }
+  .rescue h2 {
+    font-size: 34px;
+  }
+  .rescue p {
+    font-size: 16px;
+    max-width: none;
+  }
+  .hero-meal h3 {
+    font-size: 18px;
+  }
+  .hero-meal small {
+    font-size: 14px;
+  }
+  .rescue-facts {
+    font-size: 16px;
+    max-width: none;
+    margin: 18px 0;
+  }
+  .rescue .primary {
+    max-width: none;
+    width: 100%;
+    font-size: 17px;
+    min-height: 52px;
+  }
+  .hero-footnote {
+    font-size: 14px;
+    max-width: none;
+  }
+  .empty-rescue > div {
+    width: 100%;
+  }
+  .side-column {
+    grid-template-columns: 1fr;
+  }
+  .section-heading h2 {
+    font-size: 18px;
+  }
+  .timeline-time {
+    width: 61px;
+    font-size: 12px;
+  }
+  .timeline-row,
+  .gap-row {
+    gap: 8px;
+    min-height: 90px;
+  }
+  .timeline-row h3,
+  .gap-row h3 {
+    font-size: 15px;
+  }
+  .timeline-row p,
+  .gap-row p {
+    font-size: 13px;
+  }
+  .class-end {
+    display: none;
+  }
+  .now-tag {
+    font-size: 11px;
+  }
+  .timeline-icon {
+    width: 25px;
+    height: 25px;
+  }
+  .text-button {
+    font-size: 14px;
+  }
+  .page-footer {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .mobile-nav button {
+    font-size: 12px;
+    min-height: 56px;
+    min-width: 70px;
+  }
+  .form-grid label {
+    font-size: 15px;
+  }
+  .form-grid input {
+    font-size: 16px;
+  }
+  .list-row small {
+    font-size: 14px;
+  }
+  .nutrition {
+    font-size: 13px;
+  }
+  .equipment-options label,
+  .kitchen-setup .equipment-options label {
+    font-size: 14px;
+    padding: 12px;
+  }
+  .reminders-panel h2 {
+    font-size: 17px;
+  }
+  .reminder-actions {
+    gap: 8px;
+  }
+  .reminder-actions .secondary {
+    width: 100%;
+    font-size: 16px;
+  }
+  .reminder-actions .text-button {
+    font-size: 14px;
+  }
+  .reminder-alert p {
+    font-size: 15px;
+  }
+  .recipe-option summary strong {
+    font-size: 18px;
+  }
+  .recipe-option summary span {
+    font-size: 14px;
+  }
+  .recipe-option ol {
+    font-size: 16px;
+  }
+  .modal-head h2 {
+    font-size: 22px;
+  }
+}
