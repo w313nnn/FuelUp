@@ -1,0 +1,5 @@
+[
+  {"id":"mon-1","day":1,"title":"Design thinking","start":"09:00","end":"10:30","location":"Block A · Room 204"},
+  {"id":"mon-2","day":1,"title":"Business statistics","start":"10:45","end":"11:45","location":"Block B · Lecture Hall 2"},
+  {"id":"mon-3","day":1,"title":"Group project","start":"12:30","end":"14:00","location":"Library · Level 2"}
+]
