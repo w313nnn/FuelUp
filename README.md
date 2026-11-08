@@ -1,10 +1,17 @@
 # FuelUp
 
-FuelUp helps university students fit healthier meals into busy days. It brings timetable reminders, nearby food and drink discovery, fridge-based recipes, and budget tracking into one mobile-first app built with React, TypeScript, and Tailwind CSS.
+FuelUp helps university students find or cook a meal between classes.
 
-[Try the live demo](https://fuelup-student.fancyjade4.chatgpt.site/)
+| Feature | What it does |
+| --- | --- |
+| Timetable reminders | Spot gaps between classes and get a reminder to eat. |
+| Nearby food and drinks | Find places near campus and open walking directions in Google Maps. |
+| Fridge recipes | Find recipes that fit your ingredients and kitchen equipment. |
+| Budget and meal journal | Log meals and drinks and track your daily spending. |
 
-[Buildathon credits and team permissions](TEAM_PERMISSIONS.md)
+Built with React, TypeScript, and Tailwind CSS.
+
+[Try the live demo](https://fuelup-student.fancyjade4.chatgpt.site/) · [Buildathon credits and team permissions](TEAM_PERMISSIONS.md)
 
 ## Run
 
