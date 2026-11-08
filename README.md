@@ -4,21 +4,7 @@ FuelUp helps university students fit healthier meals into busy days. It brings t
 
 [Try the live demo](https://fuelup-student.fancyjade4.chatgpt.site/)
 
-## Built for AntSpark Buildathon
-
-FuelUp was created for **[AntSpark Buildathon - Empowering Girls & Women in Tech](https://luma.com/49a6b640)** on **6 November 2026**, held at **Ant International Malaysia's office in Kuala Lumpur**.
-
-The event brought students and early-career builders together to turn practical ideas into working websites using ChatGPT Sites, with guidance from Ant International mentors.
-
-## Our team and project credits
-
-- **Lee Wei En**
-- **Teh Hui Min**
-- **Isabel Eryssa**
-
-**Idea and product direction:** FuelUp's original concept came from the three of us. We identified the problem of university students skipping meals, proposed the features, and guided the experience around helping busy students find time for healthier food.
-
-**AI-assisted implementation:** Codex/ChatGPT generated and helped refine and debug the code based on our prompts, requirements, and feedback. Our team provided the ideas and product decisions; Codex/ChatGPT supported their implementation.
+[Buildathon credits and team permissions](TEAM_PERMISSIONS.md)
 
 ## Run
 
